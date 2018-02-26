@@ -15,7 +15,6 @@ describe('<GuessForm />', () => {
     const value = '10';
     wrapper.find('input[type="number"]').instance().value = value;
     wrapper.simulate('submit');
-    const instance = wrapper.instance();
     expect(dispatch).toHaveBeenCalledWith(makeGuess(value));
   });
 
